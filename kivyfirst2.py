@@ -12,4 +12,3 @@ class HelloKivyApp(App):
 helloKivy = HelloKivyApp()
 
 helloKivy.run()
-
