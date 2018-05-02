@@ -1,7 +1,9 @@
 import toga
 
+
 def button_handler(widget):
     print("hello")
+
 
 def build(app):
     box = toga.Box()
@@ -13,8 +15,10 @@ def build(app):
 
     return box
 
+
 def main():
     return toga.App('First App', 'org.pybee.heloworld', startup=build)
+
 
 if __name__ == '__main__':
     main().main_loop()
