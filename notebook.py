@@ -29,18 +29,18 @@ class Notebook(toga.App):
 
         self.box.add(self.textinput)
 
-        cmd_savaas = toga.Command(
-            # action=self.action_saveas,
-            action=self.save_file,
-            label='Save as...',
-            tooltip='Save to local file'
-        )
+        # cmd_savaas = toga.Command(
+        #     # action=self.action_saveas,
+        #     action=self.save_file,
+        #     label='Save as...',
+        #     tooltip='Save to local file'
+        # )
 
         self.main_window.content = self.box
-        self.main_window.toolbar.add(cmd_savaas)
+        # self.main_window.toolbar.add(cmd_savaas)
         self.main_window.show()
 
-    def save_file(self, widget):
+    def save_file(self):
         # notebook1.txt = textinput.value
         f = open('notebook1.txt', 'w')
         f.write(self.textinput.value)
@@ -48,6 +48,7 @@ class Notebook(toga.App):
 
     def exit(self):
         self.save_file()
+        super().exit()
 
 
 def main():
