@@ -6,8 +6,8 @@ from toga.style.pack import *
 
 
 class Notebook(toga.App):
-    def action_saveas(self, widget):
-        self.main_window.save_file_dialog('Save as...', 'notebook1.txt')
+    # def action_saveas(self, widget):
+    #     self.main_window.save_file_dialog('Save as...', 'notebook1.txt')
 
     def startup(self):
         self.main_window = toga.MainWindow(title=self.name)
@@ -15,7 +15,7 @@ class Notebook(toga.App):
         # box = toga.Box(
         #     children=[
         #         toga.MultilineTextInput(id='input1')
-        #     ],
+        #     ], 
         #     style=Pack(direction=COLUMN)
         # )
 
