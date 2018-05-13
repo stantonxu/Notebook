@@ -14,9 +14,8 @@ class Notebook(toga.App):
         self.textinput = toga.MultilineTextInput('input1', style=Pack(flex=1))
 
         # load file here
-        with open('notebook1.txt') as f:
+        with open(os.path.dirname(__file__)+'\\notebook1.txt', 'r') as f:
             self.textinput.value = f.read()
-        f.close()
 
         self.box.add(self.textinput)
 
@@ -25,7 +24,7 @@ class Notebook(toga.App):
 
     def save_file(self):
         # notebook1.txt = textinput.value
-        f = open('notebook1.txt', 'w')
+        f = open(os.path.dirname(__file__)+'\\notebook1.txt', 'w')
         f.write(self.textinput.value)
         f.close()
 
