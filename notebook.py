@@ -20,18 +20,16 @@ class Notebook(toga.App):
 
         self.box.add(self.textinput)
 
+        self.on_exit = self.save_file
+
         self.main_window.content = self.box
         self.main_window.show()
 
-    def save_file(self):
+    def save_file(self, widget, **kwargs):
         # notebook1.txt = textinput.value
         f = open('notebook1.txt', 'w')
         f.write(self.textinput.value)
         f.close()
-
-    def exit(self):
-        self.save_file()
-        super().exit()
 
 
 def main():
